@@ -1,0 +1,174 @@
+:root {
+    --white: rgb(219, 219, 219);
+    --black: rgb(14, 18, 18);
+    --purple: rgb(104, 42, 233);
+    --red: #c71585;
+    --green: rgb(50,199,102);
+    --orange: rgb(255,185,81)
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    caret-color: transparent;
+
+    .navbar {
+        position: fixed;
+        width: 100vw;
+        text-align: right;
+        // background-color: white;
+        background-color: var(--black);
+        padding-top: 25px;
+
+        .nav-item {
+            display: inline-block;
+            font-weight: bold;
+            font-family: "Roboto Mono", monospace;
+            font-size: 1em;
+            text-decoration: none;
+            color: var(--white);
+            // color: var(--black);
+            margin-right: 30px;
+
+            // transition-property: transform;
+            // transition-duration: 0.2s;
+            // transition-timing-function: ease-out;
+            // transition-delay: 0s;
+            transition: all 0.3s;
+        }
+
+        .nav-item:hover {
+            transform: translateY(-5px);
+            color: var(--purple);
+        }
+    }
+
+    .container {
+        scroll-behavior: smooth;
+        width: 100%;
+        height: 100%;
+        scroll-snap-type: y mandatory;
+        overflow-y: scroll;
+        overflow-x: hidden;
+
+        .pages {
+            display: flex;
+            flex-direction: column;
+            justify-content: left;
+            align-items: top;
+            height: 100vh;
+            background-color: var(--black);
+            color: var(--white);
+            scroll-snap-align: start;
+            font-family: "Roboto Mono", monospace;
+
+            h1 {
+                padding-left: 70px;
+                font-size: 4em;
+                background-image: url("https://media.tenor.com/aV0h3VAHWUAAAAAC/gradient.gif");
+                background-size: cover;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+
+            h2 {
+                padding-left: 80px;
+                background-image: url("https://media.tenor.com/aV0h3VAHWUAAAAAC/gradient.gif");
+                background-size: cover;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+
+            .mainContent {
+                padding-left: 100px;
+                padding-right: 100px;
+                text-align: left;
+                font-size: 19.2px;
+                font-weight: 400;
+                color: var(--white);
+            }
+
+            .desc{
+                color: var(--red);
+            }
+
+            .skills {
+                margin-top: 50px;
+                img {
+                    width: 30px;
+                    height: auto;
+                    transform: translateY(10px);
+                }
+            }
+
+            .pfproj {
+                display: grid;
+                grid-template-rows: 70vh;
+                grid-template-columns: 50vw 50vw;
+
+                margin-top: 40px;
+                padding-left: 40px;
+                text-align: left;
+                font-size: 19.2px;
+                font-weight: 400;
+                color: var(--white);
+
+                .description {
+                    padding-left: 80px;
+                    padding-right: 10px;
+                }
+
+                .working {
+                    margin-left: 60px;
+                    video {
+                        width: 600px;
+                        height: 300px;
+                        object-fit: cover;
+                        object-position: center;
+                    }
+                }
+            }
+
+            .achieve {
+                display: grid;
+                grid-template-rows: 70vh;
+                grid-template-columns: 46vw 50vw;
+
+                padding-left: 40px;
+                text-align: left;
+                font-size: 19.2px;
+                font-weight: 400;
+                color: var(--white);
+
+                .CP {
+                    padding-left: 80px;
+                }
+
+                .certific {
+                    a {
+                        text-decoration: none;
+                        color: var(--red);
+                        transition: all 0.4s;
+                    }
+
+                    a:hover {
+                        color: var(--purple);
+                    }
+                }
+
+                .hackerrank {
+                    color: var(--green);
+                }
+
+                .leetcode {
+                    color: var(--orange);
+                }
+            }
+
+            .dates {
+                font-family: "Roboto Flex", Roboto, "Helvetica ", Arial, sans-serif;
+            }
+        }
+    }
+}
